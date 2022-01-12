@@ -1,0 +1,20 @@
+name: ScoreHud
+main: Ifera\ScoreHud\ScoreHud
+api: 4.0.0
+version: 6.3.1
+author: Ifera, Pm4byNovaStark1245, NoobMCBG
+description: Updated Api 4.0.0 By NovaStark1245 and NoobOfBlind
+website: https://github.com/NoobMCBG, https://github.com/NovaStark1234
+virions:
+- ScoreFactory
+- UpdateNotifier
+- ConfigUpdater
+
+commands:
+  scorehud:
+    description: "ScoreHud Command"
+    permission: sh.command.sh
+permissions:
+  sh.command.sh:
+    default: true
+    description: Allow players to use /scorehud command.

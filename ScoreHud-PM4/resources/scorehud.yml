@@ -1,0 +1,96 @@
+---
+# DO NOT EDIT THIS VALUE.
+# ONLY FOR INTERNAL USE.
+scorehud-version: 2
+
+# =============================
+# SCOREHUD VERSION 6.0+ NOTE:
+# =============================
+#
+# Plugin developers are responsible for adding support for ScoreHud
+# in their plugins. Starting from ScoreHud version 6.0 onwards addon
+# support has been removed.
+#
+# ScoreHud is now event driven and all previous addons will no longer
+# work unless the author of that plugin adds support for ScoreHud in
+# their own plugin.
+#
+# If you want support for a plugin please ask the plugin author of
+# that plugin to add support for ScoreHud in their plugin.
+# =============================
+
+# Set the title for the scoreboard shown.
+titles:
+  # If *true* then 'titles.lines' will be used for showing changing
+  # or flickering titles. Although fancy but they might cause lag
+  # so be your own judge. This may also cause the scoreboard to
+  # flicker at times. (not preferred)
+  #
+  # If *false* then 'titles.title' will be used for showing a simple
+  # title on the scoreboard. (preferred)
+  flicker: false
+
+  # If 'titles.flicker' is set to true then adjust the rate at which
+  # the titles should change. In seconds.
+  # Default: 5 (seconds)
+  period: 5
+
+  # A simple title that will be displayed for scoreboard.
+  title: "§l§aServer §dName"
+
+  # Changing titles. Add as many as you desire.
+  lines:
+  - "§l§aNoob §dMCBG"
+  - "§l§bNova §cStark"
+  - "§l§cNoob §bMCBG"
+  - "§l§dNova §aStark"
+
+# ==================
+# IMPORTANT NOTE:
+# ==================
+# You can only set a maximum of 15 lines and no more. #blameMOJANG
+#
+# Also note that you need 'ScoreHudX' plugin for some tags to work.
+# https://github.com/Ifera/ScoreHudX
+# ==================
+
+# You can edit the lines already set below and adjust them
+# according to your needs.
+#
+# If you want same scoreboard to be displayed in every
+# world then set 'multi-world.active' to false in config.yml.
+#
+# If you have 'multi-world.active' set to true and want to
+# display a default scoreboard for a world you didn't mention
+# in 'scoreboards' key below then set 'multi-world.active' along
+# with 'multi-world.use-default' keys to true in config.yml.
+default-board:
+- ""
+- "§dName: §5{basicscore.name}"
+- ""
+- "§bOnline: §a{basicscore.online} §c/ §d{basicscore.max_online}"
+- ""
+- "§6Please Vote for us!"
+
+# If you want to display different scoreboards for every world
+# then set 'multi-world.active' to true in config.yml.
+#
+# After that edit the following to suit your needs.
+scoreboards:
+# EXAMPLE CONFIGURATION:
+# ------------------
+# "world name":    | The name of the world. Enclose it in inverted commas.
+#   lines:         | This key is important. And the plugin won't function without it.
+#   - "Line #1"    | Line number one. You can use any of the above tags.
+#   - "Line #2"    | You can add a maximum of 15 lines.
+#-------------------
+  "world":
+    lines:
+    - "§dName: §5{basicscore.name}"
+    - "§bOnline: §a{basicscore.online} §c/ §d{basicscore.max_online}"
+  "world 2":
+    lines:
+    - "§dName: §5{basicscore.name}"
+    - "§dTPS: §5{basicscore.tps}"
+    - "§bLoad: §a{basicscore.load}"
+...
