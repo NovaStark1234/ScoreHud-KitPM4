@@ -59,10 +59,10 @@ class EventListener implements Listener{
 	public function onExperienceChange(PlayerExperienceChangeEvent $event){
 	    $player = $event->getEntity();
 	    if(!$player instanceof Player) return;
-	    (new PlayerTagUpdateEvent($player, new ScoreTag("basicscore.xp_level", strval(intval($player->getXpLevel())))))->call();
+	    /*(new PlayerTagUpdateEvent($player, new ScoreTag("basicscore.xp_level", strval(intval($player->getXpLevel())))))->call();
 	    (new PlayerTagUpdateEvent($player, new ScoreTag("basicscore.xp_progress", strval(intval($player->getXpProgress())))))->call();
 	    (new PlayerTagUpdateEvent($player, new ScoreTag("basicscore.xp_remainder", strval(intval($player->getRemainderXp())))))->call();
-	    (new PlayerTagUpdateEvent($player, new ScoreTag("basicscore.xp_current_total", strval(intval($player->getCurrentTotalXp())))))->call();
+	    (new PlayerTagUpdateEvent($player, new ScoreTag("basicscore.xp_current_total", strval(intval($player->getCurrentTotalXp())))))->call();*/
 	}
 	
 	public function onMove(PlayerMoveEvent $event){
